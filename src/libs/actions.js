@@ -56,10 +56,18 @@ export const addUser = async (previousState, formData) => {
 
   try {
     connectToDB();
+    const user = await User.findOne({ email });
+    if (user) {
+      return { error: "user already exist!" };
+    }
+
+    const salt = await bycrypt.genSalt(10);
+    const hashedPasword = await bycrypt.hash(password, salt);
+
     const newUser = new User({
       username,
       email,
-      password,
+      password: hashedPasword,
       img,
       isAdmin,
     });
