@@ -1,5 +1,5 @@
 "use client";
-import { loginWithCredentials, registerUser } from "@/libs/actions";
+import { loginWithCredentials } from "@/libs/actions";
 import styles from "./loginform.module.css";
 import { useFormState } from "react-dom";
 // import { useEffect } from "react";
@@ -8,7 +8,6 @@ import Link from "next/link";
 
 function LoginForm() {
   const [state, formAction] = useFormState(loginWithCredentials, undefined);
-  const router = useRouter();
 
   //   useEffect(() => {
   //     state?.success && router.push("/login");

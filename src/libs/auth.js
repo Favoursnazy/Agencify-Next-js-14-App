@@ -71,7 +71,7 @@ export const {
             await newUser.save();
           }
         } catch (error) {
-          console.log(err);
+          console.log(error);
           return false;
         }
       }

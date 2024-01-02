@@ -7,7 +7,9 @@ function PostCard({ post }) {
     <div className={styles.container}>
       <div className={styles.top}>
         <div className={styles.imgContainer}>
-          {post.img && <Image src={post.img} fill className={styles.img} />}
+          {post.img && (
+            <Image src={post.img} fill className={styles.img} alt="" />
+          )}
         </div>
         <span className={styles.date}>01.01.2024</span>
       </div>
