@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import styles from "./links.module.css";
-import NavLink from "./navLink/navLInk";
+import NavLink from "./navLink/NavLInk";
 import Image from "next/image";
 import { handleLogout } from "@/libs/actions";
 
