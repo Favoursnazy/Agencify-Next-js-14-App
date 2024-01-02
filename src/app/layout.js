@@ -10,7 +10,7 @@ const outFit = Outfit({
 
 export const metadata = {
   title: {
-    default: "Next js 14 Homepage",
+    default: "Agencify Full stack Next js 14 Homepage",
     template: "%s | Agencify App",
   },
   description: "Official Agencify Website",
@@ -18,8 +18,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={outFit.className}>
+    <html lang="en" className={outFit.className}>
+      <body>
         <div className="container">
           <Navbar />
           {children}
